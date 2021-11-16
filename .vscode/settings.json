@@ -1,0 +1,10 @@
+{
+    "python.analysis.disabled": [],
+    "json.format.enable": true,
+    "typescript.format.enable": true,
+    "html.format.enable": true,
+    "python.pythonPath": "C:/users/kirbs/appdata/local/packages/pythonsoftwarefoundation.python.3.9_qbz5n2kfra8p0/localcache/local-packages/python",
+    "python.linting.enabled": true,
+    "python.linting.flake8Enabled": true,
+
+}
