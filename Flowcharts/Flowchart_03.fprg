@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="kirbs"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-11-09 08:48:52 PM"/>
+        <attribute name="created" value="a2lyYnM7TUFJTjsyMDIxLTExLTA5OzA4OjIxOjUwIFBNOzIxMDg="/>
+        <attribute name="edited" value="a2lyYnM7TUFJTjsyMDIxLTExLTA5OzA4OjQ4OjUyIFBNOzU7MjIzMQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="John&#13;&#10;Niemiec&#13;&#10;Flowchart_03.fprg"/>
+            <output expression="&quot;How many square feet of wall space are to be painted? &quot;" newline="False"/>
+            <declare name="squareFeet" type="Integer" array="False" size=""/>
+            <input variable="squareFeet"/>
+            <declare name="pricePerGallon" type="Real" array="False" size=""/>
+            <input variable="pricePerGallon"/>
+            <call expression="displayResults(squareFeet, pricePerGallon)"/>
+        </body>
+    </function>
+    <function name="displayResults" type="None" variable="">
+        <parameters>
+            <parameter name="sqft" type="Real" array="False"/>
+            <parameter name="priceOfGallon" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="gallons" type="Real" array="False" size=""/>
+            <assign variable="gallons" expression="sqft / 115.0"/>
+            <declare name="hours" type="Real" array="False" size=""/>
+            <assign variable="hours" expression="sqft / 115.0 * 8.0"/>
+            <declare name="costPaint" type="Real" array="False" size=""/>
+            <assign variable="costPaint" expression="gallons * priceOfGallon"/>
+            <declare name="costLabor" type="Real" array="False" size=""/>
+            <assign variable="costLabor" expression="hours * 20"/>
+            <declare name="totalPrice" type="Real" array="False" size=""/>
+            <assign variable="totalPrice" expression="costPaint + costLabor"/>
+            <output expression="&quot;Gallons required: &quot; &amp; gallons" newline="True"/>
+            <output expression="&quot;Hours required:   &quot; &amp; hours" newline="True"/>
+            <output expression="&quot;Cost of paint:    &quot; &amp; costPaint" newline="True"/>
+            <output expression="&quot;Cost of labor:    &quot; &amp; costLabor" newline="True"/>
+            <output expression="&quot;Total price:      &quot; &amp; totalPrice" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
