@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="kirbs"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-11-16 08:18:19 PM"/>
+        <attribute name="created" value="a2lyYnM7TUFJTjsyMDIxLTExLTE2OzA4OjAzOjQ5IFBNOzIxMTQ="/>
+        <attribute name="edited" value="a2lyYnM7TUFJTjsyMDIxLTExLTE2OzA4OjE4OjE5IFBNOzI7MjIyNg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="John&#13;&#10;Niemiec&#13;&#10;Flowchart_04.fprg"/>
+            <declare name="booksPurchasedMonthly" type="Integer" array="False" size=""/>
+            <input variable="booksPurchasedMonthly"/>
+            <if expression="booksPurchasedMonthly &lt;= 0">
+                <then>
+                    <output expression="&quot;You have earned 0 points...disappointing&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="booksPurchasedMonthly == 1">
+                        <then>
+                            <output expression="&quot;You have earned 5 points&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="booksPurchasedMonthly == 2">
+                                <then>
+                                    <output expression="&quot;You have earned 15 points!&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <if expression="booksPurchasedMonthly == 3">
+                                        <then>
+                                            <output expression="&quot;You have earned 30 points!!!&quot;" newline="True"/>
+                                        </then>
+                                        <else>
+                                            <output expression="&quot;You have earned 60 points! Wowsers!&quot;" newline="True"/>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
