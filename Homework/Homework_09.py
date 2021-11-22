@@ -18,7 +18,7 @@ def main():
     # allow the user to start entering names
     print('Please enter 20 names: ')
 
-    # start the loop
+    # start looping 20 times with index going from 0 - 19
     for index in range(0, 20):
 
         # get the name from the user and store value at index
@@ -46,7 +46,7 @@ def main():
     inputed_name = input('Enter a name to search for <or enter to exit>: ')
     print()
 
-    # start a loop to search for names
+    # start a loop to search for names and exit if user hits enter
     while inputed_name != '':
 
         # use binary search to find the value
@@ -58,7 +58,8 @@ def main():
         array_lookups = 0
         found = False
 
-        # start loop for value
+        # start loop for value and continue if
+        # value isn't found and it hasn't finished searching
         while not found and left <= right:
 
             # get middle value
@@ -111,7 +112,7 @@ def main():
         print()
 
 
-# create function to sort a given array of names
+# create function to sort a given array of names and return sorted array
 def sort_array(array):
 
     # use bubble sort by starting loop
