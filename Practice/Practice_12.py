@@ -23,13 +23,13 @@ def main():
     sum_of_digits = 0
     title_str = ''
 
-    # create loop to go through indices from end to 0
+    # create loop to go through indices from end of string to 0
     for number in range(len(user_input_str) - 1, -1, -1):
 
         # add each character to the beginning of the string
         reverse_str += user_input_str[number]
 
-        # see if charater is a digit
+        # if charater is a digit
         if user_input_str[number].isdigit():
 
             # add to sum of digits
@@ -41,7 +41,7 @@ def main():
     # create loop to go through each word in the string
     for word in split_str_array:
 
-        # capitalize the first letter of each word
+        # capitalize the first letter of each word -- aka title case
         title_str += word.title() + ' '
 
     # output stuff to the user
