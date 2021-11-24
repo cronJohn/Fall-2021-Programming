@@ -41,8 +41,12 @@ def main():
     # create loop to go through each word in the string
     for word in split_str_array:
 
-        # capitalize the first letter of each word -- aka title case
-        title_str += word.title() + ' '
+        # lowercase each word
+        word = word.lower()
+
+        # only capitalize the first letter of each word
+        # add the rest of the lowercase to it
+        title_str += word[0:1].upper() + word[1:] + ' '
 
     # output stuff to the user
     print("Backwards:\t" + reverse_str)
