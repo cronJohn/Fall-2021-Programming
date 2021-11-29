@@ -18,10 +18,14 @@ def main():
     # clear output.csv file
     open('output.csv', 'w').close()
 
+    # add header information to output.csv
+    with open('output.csv', 'a') as csv_file:
+        csv_file.write('Abbreviation,State,Population,Capital\n')
+
     # create loop to ask user for input
     while not stop_program:
 
-        # get user input
+        # get user input for state information
         user_input_state_initials = input("Please enter abbreviation of the state: ")
         user_input_state_name = input("Please enter the name of the state: ")
         user_input_state_population = input("Please enter the population of the state: ")
@@ -56,4 +60,5 @@ def main():
         print()
 
 
+# call main
 main()
