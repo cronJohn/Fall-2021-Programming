@@ -1,0 +1,2 @@
+# How to use
+These fprg files use the program called 'Flowgorithm'. In order to view the files, you need to [download](http://www.flowgorithm.org/download/) Flowgorithm first. You can then choose to open these files in the Flowgorithm program you downloaded.
