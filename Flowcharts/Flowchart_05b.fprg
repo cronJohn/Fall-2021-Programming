@@ -4,23 +4,23 @@
         <attribute name="name" value=""/>
         <attribute name="authors" value="kirbs"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2021-11-30 08:38:59 PM"/>
+        <attribute name="saved" value="2021-11-30 08:42:19 PM"/>
         <attribute name="created" value="a2lyYnM7S0lSQl9NQUlORlJBTUU7MjAyMS0xMS0zMDswODozNjowMSBQTTsyODU4"/>
         <attribute name="edited" value="a2lyYnM7S0lSQl9NQUlORlJBTUU7MjAyMS0xMS0zMDswODozNjowNCBQTTsxO2tpcmJzO0tJUkJfTUFJTkZSQU1FOzIwMjEtMTEtMzA7MDg6MTE6MzcgUE07Rmxvd2NoYXJ0XzA1YS5mcHJnOzc2NTU="/>
-        <attribute name="edited" value="a2lyYnM7S0lSQl9NQUlORlJBTUU7MjAyMS0xMS0zMDswODozODo1OSBQTTsyOzI5ODI="/>
+        <attribute name="edited" value="a2lyYnM7S0lSQl9NQUlORlJBTUU7MjAyMS0xMS0zMDswODo0MjoxOSBQTTs0OzI5NzU="/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
         <body>
-            <comment text="John&#13;&#10;Niemiec&#13;&#10;Flowchart_05a.fprg"/>
+            <comment text="John&#13;&#10;Niemiec&#13;&#10;Flowchart_05b.fprg"/>
             <declare name="inputNumber" type="Real" array="False" size=""/>
             <declare name="maxValue" type="Real" array="False" size=""/>
             <declare name="minValue" type="Real" array="False" size=""/>
             <assign variable="maxValue" expression="0"/>
             <assign variable="minValue" expression="1000000"/>
+            <output expression="&quot;Enter a number between zero and one million, or -99 to stop:&quot;" newline="True"/>
+            <input variable="inputNumber"/>
             <while expression="inputNumber != -99">
-                <output expression="&quot;Enter a number between zero and one million, or -99 to stop:&quot;" newline="True"/>
-                <input variable="inputNumber"/>
                 <if expression="inputNumber &gt; maxValue">
                     <then>
                         <assign variable="maxValue" expression="inputNumber"/>
@@ -33,6 +33,8 @@
                     </then>
                     <else/>
                 </if>
+                <output expression="&quot;Enter a number between zero and one million, or -99 to stop:&quot;" newline="True"/>
+                <input variable="inputNumber"/>
             </while>
             <output expression="&quot;The smallest number was: &quot; &amp; minValue" newline="True"/>
             <output expression="&quot;The largest number was: &quot; &amp; maxValue" newline="True"/>
