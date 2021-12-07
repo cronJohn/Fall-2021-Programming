@@ -17,14 +17,16 @@ def main():
 
     # start and continue loop if input_str is not empty
     while input_str != '':
+
         # whitespace
         print()
         print()
 
+        # get the amount of lowercase and uppercase chars in input_str
         lower_case_count = count_lowercase_characters(input_str)
         upper_case_count = count_uppercase_characters(input_str)
 
-        # output lowercase and uppercase counts
+        # output the lowercase and uppercase counts
         print('Lower case:\t\t' + str(lower_case_count))
         print('Upper case:\t\t' + str(upper_case_count))
 
@@ -37,10 +39,10 @@ def main():
         # create first_letter_reversed_str variable
         first_letter_reversed_str = ''
 
-        # loop through the string starting at the end
+        # loop through the string starting at the end and working backwards
         for i in range(len(temp_str) - 1, -1, -1):
 
-            # get the first index of the string and add it to reversed_str
+            # get the first index of the word and add it to first_letter_reversed_str
             first_letter_reversed_str += temp_str[i][0]
 
         # output first_letter_reversed_str
