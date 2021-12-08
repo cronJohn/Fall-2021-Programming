@@ -20,7 +20,7 @@ def main():
     print_menu()
 
     # ask user for input
-    user_input = int(input('Enter your choice (1-4). '))
+    user_input = int(input('Enter your choice (1-4): '))
 
     # create while loop to keep asking for input
     while user_input != 4:
@@ -39,67 +39,105 @@ def main():
 
         # if user input is not 1, 2, 3, or 4, print error
         else:
-            print('\nError! Please enter a valid choice.\n')
+            print('ERROR: Enter a valid number between 1 and 4')
 
-        # print menu
-        print_menu()
+        if user_input >= 1 and user_input <= 4:
+            # print menu
+            print_menu()
 
-        # ask user for input again
-        user_input = int(input('Enter your choice (1-4). '))
+            # ask user for input again
+            user_input = int(input('Enter your choice (1-4): '))
 
-    # end program
-    print('Thanks for using the Geometry Calculator!')
+        else:  # custom menu for error message
+            user_input = int(input('Please enter your menu choice: '))
 
 
 # create function to print menu
 def print_menu():
 
-    print('\tGeometry Calculator')
     print('1. Calculate the Area of a Circle')
     print('2. Calculate the Area of a Rectangle')
     print('3. Calculate the Area of a Triangle')
-    print('4. Quit\n')
+    print('4. Quit')
 
 
 # create function to calculate area of a circle
 def calculate_area_circle():
 
+    # print header
+    print('\n---Area for a Circle---')
+
     # ask user for radius
-    radius = float(input('Enter the radius of the circle: '))
+    radius = float(input('Enter the radius: '))
+
+    # loop for a good radius
+    while radius <= 0:
+        print('ERROR: Enter a valid number')
+        radius = float(input('Please enter the radius: '))
 
     # calculate area of circle
     area = math.pi * radius * radius
 
     # print area
-    print('\nThe area of the circle is:', area, '\n')
+    print('The answer is:   ', area, '\n')
 
 
 # create function to calculate area of a triangle
 def calculate_area_triangle():
 
-    # ask user for base and height
-    base = float(input('Enter the base of the triangle: '))
-    height = float(input('Enter the height of the triangle: '))
+    # print header
+    print('\n---Area for a Triangle---')
+
+    # ask user for base
+    base = float(input('Enter the base: '))
+
+    # loop for a good base
+    while base <= 0:
+        print('ERROR: Enter a valid number')
+        base = float(input('Please enter the base: '))
+
+    # ask user for height
+    height = float(input('Enter the height: '))
+
+    # loop for good height
+    while height <= 0:
+        print('ERROR: Enter a valid number')
+        height = float(input('Please enter the height: '))
 
     # calculate area of triangle
     area = (base * height) / 2
 
     # print area
-    print('\nThe area of the triangle is:', area, '\n')
+    print('The answer is:   ', area, '\n')
 
 
 # create function to calculate area of a rectangle
 def calculate_area_rectangle():
 
-    # ask user for width and height
-    width = float(input('Enter the width of the rectangle: '))
-    height = float(input('Enter the height of the rectangle: '))
+    # print header
+    print('\n---Area for a Rectangle---')
 
-    # calculate area of rectangle
-    area = width * height
+    # ask user for base
+    base = float(input('Enter the base: '))
+
+    # loop for a good base
+    while base <= 0:
+        print('ERROR: Enter a valid number')
+        base = float(input('Please enter the base: '))
+
+    # ask user for width
+    width = float(input('Enter the width: '))
+
+    # loop for good height
+    while width <= 0:
+        print('ERROR: Enter a valid number')
+        width = float(input('Please enter the width: '))
+
+    # calculate area of the rectangle
+    area = base * width
 
     # print area
-    print('\nThe area of the rectangle is:', area, '\n')
+    print('The answer is:   ', area, '\n')
 
 
 # call main function
