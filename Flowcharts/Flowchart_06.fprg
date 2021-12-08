@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="kirbs"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-12-07 08:17:56 PM"/>
+        <attribute name="created" value="a2lyYnM7S0lSQl9NQUlORlJBTUU7MjAyMS0xMi0wNzswNzo1MToyMiBQTTsyODYy"/>
+        <attribute name="edited" value="a2lyYnM7S0lSQl9NQUlORlJBTUU7MjAyMS0xMi0wNzswODoxNzo1NiBQTTsxMTszMDI5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="John&#13;&#10;Niemiec&#13;&#10;Flowchart_06.fprg"/>
+            <declare name="currentYear" type="Integer" array="False" size=""/>
+            <declare name="totalTuitionSum" type="Real" array="False" size=""/>
+            <declare name="roundedAmount" type="Real" array="False" size=""/>
+            <assign variable="currentYear" expression="1"/>
+            <assign variable="totalTuitionSum" expression="6000"/>
+            <while expression="currentYear &lt;= 5">
+                <assign variable="totalTuitionSum" expression="totalTuitionSum * 1.02"/>
+                <assign variable="roundedAmount" expression="roundToPenny(totalTuitionSum)"/>
+                <output expression="&quot;Year &quot; &amp; currentYear &amp; &quot;: &quot; &amp; roundedAmount" newline="True"/>
+                <assign variable="currentYear" expression="currentYear + 1"/>
+            </while>
+        </body>
+    </function>
+    <function name="roundToPenny" type="Real" variable="roundedDollarValue">
+        <parameters>
+            <parameter name="dollarValue" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="roundedDollarValue" type="Real" array="False" size=""/>
+            <assign variable="roundedDollarValue" expression="dollarValue * 100"/>
+            <assign variable="roundedDollarValue" expression="roundedDollarValue + 0.5"/>
+            <assign variable="roundedDollarValue" expression="int(roundedDollarValue)"/>
+            <assign variable="roundedDollarValue" expression="roundedDollarValue / 100"/>
+        </body>
+    </function>
+</flowgorithm>
